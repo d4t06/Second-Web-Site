@@ -1,0 +1,217 @@
+body,
+html {
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.on {
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-attachment: fixed;
+  height: 100%;
+  background: radial-gradient(#555, rgb(31, 31, 31));
+}
+
+.bulb1 {
+  width: 130px;
+  height: 130px;
+  background: rgb(70, 70, 70);
+  position: absolute;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.bulb1 span:nth-child(1) {
+  background: transparent;
+  /* background: rgb(70, 70, 70); */
+  box-shadow: -30px 25px 0px 10px rgb(70, 70, 70);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  z-index: 2;
+  border-bottom-left-radius: 50px;
+  transform: rotate(-115deg);
+  left: -2px;
+  top: -35px;
+}
+.bulb1 span:nth-child(2) {
+  background: transparent;
+  /* background: rgb(70, 70, 70); */
+  box-shadow: -30px 25px 0px 10px rgb(70, 70, 70);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  z-index: 2;
+  border-bottom-left-radius: 50px;
+  transform: rotate(20deg);
+  left: 83px;
+  top: -32px;
+}
+.bulb1::before {
+  content: "";
+  position: absolute;
+  height: 90px;
+  width: 50px;
+  bottom: 50%;
+  border-top: 30px solid black;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  transform: translateX(-50%);
+  background: rgb(70, 70, 70);
+  z-index: 3;
+}
+
+.wire {
+  height: 40%;
+  width: 4px;
+  background: rgb(0, 0, 0);
+  position: absolute;
+  /* z-index: 10; */
+  /* transform: translateX(-50%); */
+  top: 0;
+  /* bottom: 50%; */
+  /* margin-bottom: 55px; */
+}
+
+.button {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+.switch {
+  position: absolute;
+  height: 70px;
+  width: 60px;
+  background: rgb(235, 235, 235);
+  bottom: 70px;
+  right: 50px;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.switch .btn {
+  position: relative;
+  height: 40px;
+  width: 22px;
+  border-radius: 6px;
+  border: 3px solid black;
+  background: linear-gradient(#777, #fff, #777);
+}
+.switch .btn::before {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+}
+
+.on .switch .btn::before {
+  bottom: 0;
+  transition: 0.3s;
+}
+
+/* .toggle-checkbox:checked {
+  background: rgb(92, 187, 63);
+  transition: 0.2s;
+}
+.toggle-checkbox:before {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(170, 167, 167);
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  top: 47%;
+  transform: translatey(-50%);
+  left: 5px;
+  transition: 0.2s;
+}
+:checked.toggle-checkbox:before {
+  left: 30px;
+  background-color: blanchedalmond;
+} */
+
+body.on .bulb1::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%);
+  height: 150px;
+  width: 150px;
+  filter: blur(30px);
+  background: rgb(185, 169, 138);
+  z-index: 10;
+}
+/* body.on .green::after {
+  background: rgb(16, 145, 16);
+}
+body.on .red::after {
+  background: rgb(198, 38, 38);
+}
+body.on .white::after {
+  background: rgb(228, 228, 228);
+} */
+body.on .bulb1 {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 50px #fff, 0 0 100px #fff, 0 0 200px #fff, 0 0 300px #fff;
+}
+body.on .bulb1::before {
+  background: rgb(255, 255, 255);
+}
+body.on .bulb1 span:nth-child(1) {
+  box-shadow: -30px 25px 0px 10px rgb(255, 255, 255);
+}
+body.on .bulb1 span:nth-child(2) {
+  box-shadow: -30px 25px 0px 10px rgb(255, 255, 255);
+}
+
+/* .button {
+  height: auto;
+  width: auto;
+  border: 3px solid rgb(0, 0, 0);
+  position: absolute;
+  bottom: 80px;
+  right: 120px;
+  background: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+} */
+/* .button #btn {
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid rgb(0, 0, 0);
+  margin: 5px;
+}
+.btn1 {
+  background: green;
+}
+.btn2 {
+  background: red;
+}
+.btn3 {
+  background: white;
+}
+.btn4 {
+  background: yellow;
+} */
